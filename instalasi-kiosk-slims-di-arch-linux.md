@@ -109,11 +109,40 @@ cd http/
 ls
 ```
 
-### install wget slims
+
+### install slims
 
 ```
-wget http://github.com//slims/slims9_bulian/releases/download/v9.6.0/slims9_bulian-9.6.0.tar.gz
+sudo systemctl restart httpd
+```
+``
+```
+wget https://github.com/slims/slims9_bulian/releases/download/v9.6.0/slims9_bulian-9.6.0.tar.gz	
 ```
 
+```
+tar xzvf slims9_bulian-9.6.0.tar.gz	
+```
 
+```
+mv slims9_bulian-9.6.0 slims
+```
+```
+sudo cp -r slims /srv/http/slims/
+```
 
+```
+sudo chown -R http:http /srv/http/slims
+```
+
+```
+cd /srv/http/slims
+```
+```
+sudo chmod -R 777 config/ files/ images/ repository/ 
+```
+
+```
+sudo systemctl restart httpd
+```
+*Note : http://localhost/slims

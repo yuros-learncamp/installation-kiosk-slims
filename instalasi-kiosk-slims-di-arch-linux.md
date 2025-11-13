@@ -1,0 +1,4 @@
+### Apache 
+```
+pacman -S apache
+```

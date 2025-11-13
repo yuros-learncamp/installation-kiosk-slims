@@ -146,3 +146,5 @@ sudo chmod -R 777 config/ files/ images/ repository/
 sudo systemctl restart httpd
 ```
 *Note : http://localhost/slims
+
+

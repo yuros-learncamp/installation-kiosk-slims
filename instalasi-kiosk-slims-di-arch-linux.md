@@ -147,4 +147,15 @@ sudo systemctl restart httpd
 ```
 *Note : http://localhost/slims
 
+### ScreenShoot tampilan SLIMS setelah di instal
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c670c18b-06d7-4f18-b83f-e7261e866b41" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/26df6ce5-1f6b-42de-974b-bfc5d3fe8448" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/93287910-b0ea-471b-a5d5-11b2758f1c6e" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bdc3cbd1-0008-4499-9602-0c6ac6b178d3" />
+
+
 

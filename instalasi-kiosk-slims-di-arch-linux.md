@@ -3,7 +3,7 @@
 #### instalasi
 
 ```
-Pacman -S mariadb
+pacman -S mariadb
 ```
 ```
 sudo systemctl start mariadb

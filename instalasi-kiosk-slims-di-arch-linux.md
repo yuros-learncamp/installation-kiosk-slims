@@ -119,19 +119,23 @@ exit;
 
 ## step 11
 
-- masuk ke dalam folder /srv/http
+- Install slims directory dari github
 
 ```
-cd /srv/http/
+wget https://github.com/slims/slims9_bulian/releases/download/v9.7.2/slims9_bulian-9.7.2.tar.gz
 ```
-
-- download slims melalui github release slims bulian
-https://github.com/slims/slims9_bulian/releases
 
 - pindahkan unzip file slims dan pindahkan ke /srv/http
 
 ```
-tar -xf Downloads/slims9_bulian-9.7.2.tar.gz -C /srv/http
+sudo tar -xf slims9_bulian-9.7.2.tar.gz -C /srv/http
+```
+
+## step 12
+- masuk ke dalam folder /srv/http
+
+```
+cd /srv/http/
 ```
 
 - ganti nama file menjadi slims agar lebih mudah nantinya untuk mengakses
@@ -140,7 +144,7 @@ tar -xf Downloads/slims9_bulian-9.7.2.tar.gz -C /srv/http
 sudo mv /srv/http/slims9_bulian-9.7.2 /srv/http/slims
 ```
 
-## step 12
+## step 13
 
 - tetapkan izin untuk direktori slims
 
@@ -148,7 +152,7 @@ sudo mv /srv/http/slims9_bulian-9.7.2 /srv/http/slims
 sudo chown -R http:http /srv/http/slims
 ```
 
-## step 13
+## step 14
 
 - konfigurasi file utama apache
 
@@ -156,7 +160,7 @@ sudo chown -R http:http /srv/http/slims
 sudo nvim /etc/httpd/conf/httpd.conf
 ```
 
-- tambahkan pada Loadmodule, dibawah addhandler php
+- aktifkan module proxy dan proxy fcgi
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
@@ -193,7 +197,7 @@ AllowOverride All
 
 > setelah itu save
 
-## step 14
+## step 15
 
 - konfigurasi file php.ini
 
@@ -219,7 +223,7 @@ extension=mbstring
 
 > setelah itu save
 
-## step 15
+## step 16
 
 - enable php fpm service
 
@@ -233,7 +237,7 @@ sudo systemctl enable php-fpm
 sudo systemctl start php-fpm
 ```
 
-## step 16
+## step 17
 
 - restart apache service
 
@@ -241,13 +245,13 @@ sudo systemctl start php-fpm
 sudo systemctl restart httpd
 ```
 
-## step 17
+## step 18
 
 - akses slims melalui web browser
 
 http://localhost/slims
 
-## step 18
+## step 19
 
 - klik get started
 
@@ -267,22 +271,12 @@ http://localhost/slims
 
 note: user dan password yang dibuat saat membuat user untuk database sebelumnya
 
-## step 19
+## step 20
 
 - membuat super user atau administrator user, disesuaikan dengan keinginan
 
 - setelah itu klik next
 
-## step 20 
-
-- klik go to my slims
-
 ## step 21
 
-- untuk alasan keamanan hapus folder install pada /srv/http/slims/install
-
-```
-sudo rm -fr /srv/http/slims/install
-```
-
-**selamat anda telah berhasil menginstall slims secara manual**
+- klik go to my slims
